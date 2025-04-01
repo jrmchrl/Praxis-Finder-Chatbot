@@ -1,5 +1,3 @@
-Hier ist eine README-Datei für Ihr Projekt, die den aktuellen Stand und die Nutzung des PraxisFinder-Chatbots beschreibt:
-
 PraxisFinder Chatbot
 
 Der PraxisFinder Chatbot ist eine Anwendung, die Benutzern dabei hilft, medizinische Praxen und Heilpraktiker zu finden, insbesondere solche mit ganzheitlichem Ansatz wie Ayurveda und Traditionelle Chinesische Medizin (TCM).
@@ -64,8 +62,6 @@ Stellen Sie sicher, dass alle Abhängigkeiten installiert sind und die virtuelle
 
 Kontakt
 
-Für Fragen oder Unterstützung wenden Sie sich bitte an [Ihre Kontaktinformationen].
+Für Fragen oder Unterstützung wenden Sie sich bitte an charlotte@jeroma.com
 
-⸻
 
-Diese README-Datei bietet einen Überblick über das Projekt und Anleitungen zur Installation und Nutzung des PraxisFinder Chatbots.
