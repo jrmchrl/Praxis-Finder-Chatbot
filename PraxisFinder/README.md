@@ -1,67 +1,103 @@
-PraxisFinder Chatbot
 
-Der PraxisFinder Chatbot ist eine Anwendung, die Benutzern dabei hilft, medizinische Praxen und Heilpraktiker zu finden, insbesondere solche mit ganzheitlichem Ansatz wie Ayurveda und Traditionelle Chinesische Medizin (TCM).
+# 🌿 PraxisFinder Chatbot
 
-Projektstruktur
+Der **PraxisFinder Chatbot** ist ein intelligenter KI-gestützter Chatbot, der Nutzer:innen hilft, passende ganzheitliche medizinische Praxen wie Ayurveda-, TCM- oder Heilpraktikerpraxen zu finden – basierend auf ihren Symptomen.
 
-Die Hauptverzeichnisse und -dateien des Projekts sind wie folgt organisiert:
-	•	backend/: Enthält die Backend-Komponenten des Projekts, einschließlich des Modells und der Trainingsskripte.
-	•	train_model.py: Skript zum Trainieren des Modells mit den bereitgestellten Daten.
-	•	data/: Beinhaltet die Datensätze für das Training und die Tests.
-	•	symptome_training.csv: CSV-Datei mit den Trainingsdaten.
-	•	model/: Speichert das trainierte Modell.
-	•	symptom_model.h5: Die gespeicherte Modelldatei nach dem Training. ￼
-	•	app.py: Hauptskript für die Ausführung der Streamlit-Anwendung.
-	•	requirements.txt: Liste der Python-Abhängigkeiten für das Projekt.
+---
 
-Installation und Einrichtung
-	1.	Repository klonen:
+## 📁 Projektstruktur
 
-git clone <repository-url>
-cd Praxis-Finder-Chatbot
+```
+PraxisFinder-Chatbot/
+├── backend/
+│   └── train_model.py          # Training des KI-Modells
+├── data/
+│   └── symptome_training.csv   # Trainingsdatensatz
+├── model/
+│   ├── symptom_model.h5        # Trainiertes Modell
+│   ├── tokenizer.pkl           # Tokenizer für Texteingaben
+│   └── label_encoder.pkl       # Label-Encoder für Klassennamen
+├── PraxisFinder/
+│   └── app.py                  # Streamlit Frontend
+├── praxisempfehlung.py         # Logik für passende Praxen
+├── testiflablesbalanced.py     # Datensatzprüfung
+├── plot_label_distribution.py  # Visualisierung der Labelverteilung
+└── README.md                   # Diese Datei
+```
 
+---
 
-	2.	Virtuelle Umgebung erstellen und aktivieren:
-	•	Mit venv: ￼
+## ⚙️ Setup & Installation
 
-python3 -m venv venv
-source venv/bin/activate
+### 1. Repository klonen
 
+```bash
+git clone <REPOSITORY_URL>
+cd PraxisFinder-Chatbot
+```
 
-	•	Mit pyenv und pyenv-virtualenv:
+### 2. Python-Umgebung erstellen
 
+```bash
 pyenv virtualenv 3.10.11 praxisfinder-env
 pyenv activate praxisfinder-env
+```
 
+> Alternativ mit `venv`:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
 
-	3.	Abhängigkeiten installieren:
+### 3. Abhängigkeiten installieren
 
+```bash
 pip install -r requirements.txt
+```
 
+### 4. Modell trainieren (optional, falls nicht vorhanden)
 
-	4.	Modell trainieren:
-Stellen Sie sicher, dass die Datei symptome_training.csv im Verzeichnis data/ vorhanden ist. Führen Sie dann das Trainingsskript aus:
-
+```bash
 python backend/train_model.py
+```
 
-Das trainierte Modell wird im Verzeichnis model/ als symptom_model.h5 gespeichert.
+---
 
-Anwendung ausführen
+## 🚀 Anwendung starten
 
-Starten Sie die Streamlit-Anwendung mit folgendem Befehl:
-
+```bash
+cd PraxisFinder
 streamlit run app.py
+```
 
-Die Anwendung wird im Standard-Webbrowser geöffnet und ermöglicht es Benutzern, durch Eingabe von Symptomen passende Praxen zu finden.
+---
 
-Fehlerbehebung
-	•	Modul nicht gefunden (ModuleNotFoundError):
-Stellen Sie sicher, dass alle Abhängigkeiten installiert sind und die virtuelle Umgebung aktiviert ist.
-	•	Datei nicht gefunden (FileNotFoundError):
-Überprüfen Sie, ob die erforderlichen Dateien, insbesondere symptome_training.csv und symptom_model.h5, im entsprechenden Verzeichnis vorhanden sind.
+## 💡 Nutzung
 
-Kontakt
+- Gib deine Symptome im Textfeld ein
+- Das KI-Modell erkennt die passende medizinische Kategorie
+- Eine passende ganzheitliche Praxis wird dir vorgeschlagen
 
-Für Fragen oder Unterstützung wenden Sie sich bitte an charlotte@jeroma.com
+---
 
+## 🧠 Verwendete Technologien
 
+- Python 3.10
+- TensorFlow / Keras
+- Streamlit (Frontend)
+- Pandas, NumPy, Scikit-Learn
+
+---
+
+## 📌 Hinweise
+
+- Die App basiert auf einem lokal trainierten KI-Modell (keine API-Kosten!)
+- Daten sind anpassbar über `symptome_training.csv`
+- Praxenvorschläge kannst du in `praxisempfehlung.py` pflegen
+
+---
+
+## 🧘 Autorin
+
+Charlotte Herta Elisabeth Jeroma 💚  
+Mit Liebe für alternative Heilmethoden und KI.
