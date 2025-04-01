@@ -99,5 +99,4 @@ streamlit run app.py
 
 ## 🧘 Autorin
 
-Charlotte Herta Elisabeth Jeroma 💚  
-Mit Liebe für alternative Heilmethoden und KI.
+Charlotte Jeroma 
