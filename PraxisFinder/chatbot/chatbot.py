@@ -24,3 +24,8 @@ while True:
         break
     kategorie = chatbot_input(user_input)
     print(f"Empfohlene Kategorie: {kategorie}")
+
+    from praxisempfehlung import empfehlung_für_kategorie
+
+praxis = empfehlung_für_kategorie(kategorie)
+print(f"👉 Empfohlene Praxis: {praxis}\n")
